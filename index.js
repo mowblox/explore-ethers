@@ -16,10 +16,10 @@ const wallet3 = new Wallet(PRIVATE_KEY_3, provider);
     console.log("balance wallet3: ", utils.formatEther(await wallet3.getBalance()))
 
 
-    // const tx0 = await wallet1.sendTransaction({
-    //     value: utils.parseEther(".5"),
-    //     to: wallet2.address,
-    // })
+    const tx0 = await wallet1.sendTransaction({
+        value: utils.parseEther(".5"),
+        to: wallet2.address,
+    })
     // const tx1 = await wallet1.sendTransaction({
     //     value: utils.parseEther(".5"),
     //     to: wallet2.address,

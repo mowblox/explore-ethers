@@ -27,7 +27,7 @@ const accounts = [].concat([{
 }
 ]);
 
-const ganacheProvider = Ganache.provider({ accounts });
+const ganacheProvider = Ganache.provider({ accounts }); // this is our local blockchain. It runs on our machine
 export {
     INITIAL_BALANCE,
     PRIVATE_KEY,
