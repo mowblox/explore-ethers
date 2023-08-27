@@ -36,16 +36,19 @@ const sendEther = async (i) => {
     stopMiner();
     let i = 0; 
     // block 1
-    for (; i < 3; i++) await sendEther(i);
+    // for (; i < 3; i++) await sendEther(i);
+    await sendEther(0);
+    // await sendEther(1);
+    await sendEther(2);
     await mineBlock();
 
     // // block 2
-    for (; i < 7; i++) await sendEther(i);
-    await mineBlock();
+    // for (; i < 7; i++) await sendEther(i);
+    // await mineBlock();
 
-    // // block 3
-    for (; i < 15; i++) await sendEther(i);
-    await mineBlock();
+    // // // block 3
+    // for (; i < 15; i++) await sendEther(i);
+    // await mineBlock();
 
     const blockNumber = await provider.getBlockNumber();
     const transactionsPerBlock = await provider.getBlockWithTransactions(blockNumber)
